@@ -1,5 +1,5 @@
-import { createSignal, createEffect, Show, For } from 'solid-js';
-import Sentry from '@sentry/browser';
+import { createSignal, Show, For } from 'solid-js';
+import * as Sentry from '@sentry/browser';
 
 function App() {
   const [username, setUsername] = createSignal('');
@@ -21,12 +21,12 @@ function App() {
         setChannels(parsedChannels);
         setIsLoggedIn(true);
       } else {
-        alert('Failed to fetch playlist. Please check your credentials.');
+        alert('فشل في جلب قائمة التشغيل. يرجى التحقق من بيانات الاعتماد الخاصة بك.');
       }
     } catch (error) {
       Sentry.captureException(error);
-      console.error('Error logging in:', error);
-      alert('An error occurred. Please try again.');
+      console.error('خطأ في تسجيل الدخول:', error);
+      alert('حدث خطأ. يرجى المحاولة مرة أخرى.');
     } finally {
       setLoading(false);
     }
@@ -63,22 +63,22 @@ function App() {
       <Show when={!isLoggedIn()}>
         <div class="flex items-center justify-center h-full">
           <div class="w-full max-w-md p-8 bg-white rounded-xl shadow-lg">
-            <h2 class="text-3xl font-bold mb-6 text-center text-purple-600">Atlas Live Pro</h2>
+            <h2 class="text-3xl font-bold mb-6 text-center text-purple-600">أطلس لايف برو</h2>
             <form onSubmit={login} class="space-y-4">
               <input
                 type="text"
-                placeholder="Username"
+                placeholder="اسم المستخدم"
                 value={username()}
                 onInput={(e) => setUsername(e.target.value)}
-                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-transparent box-border"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-transparent box-border text-right"
                 required
               />
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="كلمة المرور"
                 value={password()}
                 onInput={(e) => setPassword(e.target.value)}
-                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-transparent box-border"
+                class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-400 focus:border-transparent box-border text-right"
                 required
               />
               <button
@@ -87,10 +87,10 @@ function App() {
                 disabled={loading()}
               >
                 <Show when={loading()}>
-                  Logging in...
+                  جاري تسجيل الدخول...
                 </Show>
                 <Show when={!loading()}>
-                  Login
+                  تسجيل الدخول
                 </Show>
               </button>
             </form>
@@ -100,12 +100,12 @@ function App() {
       <Show when={isLoggedIn()}>
         <div class="flex flex-col h-full">
           <div class="flex justify-between items-center mb-4">
-            <h1 class="text-4xl font-bold text-purple-600">Atlas Live Pro</h1>
+            <h1 class="text-4xl font-bold text-purple-600">أطلس لايف برو</h1>
             <button
               class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-6 rounded-full shadow-md focus:outline-none focus:ring-2 focus:ring-red-400 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
               onClick={logout}
             >
-              Log Out
+              تسجيل الخروج
             </button>
           </div>
           <Show when={selectedChannel()}>
@@ -120,7 +120,7 @@ function App() {
             </div>
           </Show>
           <div class="flex-1 overflow-y-auto">
-            <h2 class="text-2xl font-bold mb-2 text-purple-600">Channel List</h2>
+            <h2 class="text-2xl font-bold mb-2 text-purple-600">قائمة القنوات</h2>
             <div class="space-y-2">
               <For each={channels()}>
                 {(channel) => (
@@ -128,7 +128,7 @@ function App() {
                     class="bg-white p-4 rounded-lg shadow-md hover:bg-purple-100 transition duration-300 ease-in-out transform hover:scale-105 cursor-pointer"
                     onClick={() => setSelectedChannel(channel)}
                   >
-                    <p class="text-gray-800 font-semibold">{channel.name}</p>
+                    <p class="text-gray-800 font-semibold text-right">{channel.name}</p>
                   </div>
                 )}
               </For>

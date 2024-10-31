@@ -1,41 +1,41 @@
-# Atlas Live Pro
+# أطلس لايف برو
 
-Atlas Live Pro is an IPTV streaming application that allows users to watch live television channels. Users can enter their IPTV service username and password to access and stream channels directly within the app.
+أطلس لايف برو هو تطبيق لبث قنوات الـ IPTV يتيح للمستخدمين مشاهدة القنوات التلفزيونية المباشرة. يمكن للمستخدمين إدخال اسم المستخدم وكلمة المرور الخاصة بخدمة الـ IPTV الخاصة بهم للوصول إلى القنوات والبث مباشرة داخل التطبيق.
 
-## User Journeys
+## رحلات المستخدم
 
-### 1. Accessing the Application
+### 1. الوصول إلى التطبيق
 
-- **Step 1**: Open the Atlas Live Pro application in your web browser.
-- **Details**: The homepage displays a simple and user-friendly interface with a form to enter your IPTV credentials.
+1. **الخطوة 1**: افتح تطبيق أطلس لايف برو في متصفح الويب الخاص بك.
+2. **التفاصيل**: تعرض الصفحة الرئيسية واجهة بسيطة وسهلة الاستخدام مع نموذج لإدخال بيانات اعتماد الـ IPTV الخاصة بك.
 
-### 2. Entering IPTV Credentials
+### 2. إدخال بيانات اعتماد الـ IPTV
 
-- **Step 1**: Enter your IPTV service **Username** in the designated input field.
-- **Step 2**: Enter your IPTV service **Password** in the password input field.
-- **Step 3**: Click the **Login** button to proceed.
-- **Details**: The app uses these credentials to construct a secure link to fetch your IPTV channel list.
+1. **الخطوة 1**: أدخل **اسم المستخدم** الخاص بخدمة الـ IPTV في حقل الإدخال المخصص.
+2. **الخطوة 2**: أدخل **كلمة المرور** الخاصة بخدمة الـ IPTV في حقل إدخال كلمة المرور.
+3. **الخطوة 3**: انقر على زر **تسجيل الدخول** للمتابعة.
+4. **التفاصيل**: يستخدم التطبيق هذه البيانات لإنشاء رابط آمن لجلب قائمة القنوات الخاصة بك.
 
-### 3. Loading Channel List
+### 3. تحميل قائمة القنوات
 
-- **Step 1**: After logging in, the app fetches your personalized IPTV playlist.
-- **Step 2**: The app parses the playlist and displays a list of available channels.
-- **Details**: Channels are displayed with their names in an organized and scrollable list.
+1. **الخطوة 1**: بعد تسجيل الدخول، يجلب التطبيق قائمة التشغيل المخصصة للـ IPTV الخاصة بك.
+2. **الخطوة 2**: يقوم التطبيق بتحليل قائمة التشغيل ويعرض قائمة بالقنوات المتاحة.
+3. **التفاصيل**: يتم عرض القنوات بأسمائها في قائمة منظمة قابلة للتمرير.
 
-### 4. Selecting and Watching a Channel
+### 4. اختيار قناة ومشاهدتها
 
-- **Step 1**: Browse through the channel list to find a channel you want to watch.
-- **Step 2**: Click on a channel name to select it.
-- **Step 3**: The selected channel starts playing in the video player above the channel list.
-- **Details**: You can use the video player's controls to pause, play, or enter full-screen mode.
+1. **الخطوة 1**: تصفح قائمة القنوات للعثور على القناة التي ترغب في مشاهدتها.
+2. **الخطوة 2**: انقر على اسم القناة لتحديدها.
+3. **الخطوة 3**: تبدأ القناة المحددة في التشغيل في مشغل الفيديو أعلى قائمة القنوات.
+4. **التفاصيل**: يمكنك استخدام عناصر التحكم في مشغل الفيديو لإيقاف التشغيل مؤقتًا أو التشغيل أو الدخول في وضع ملء الشاشة.
 
-### 5. Logging Out
+### 5. تسجيل الخروج
 
-- **Step 1**: To log out, click the **Log Out** button at the top-right corner of the screen.
-- **Details**: Logging out clears your IPTV credentials and returns you to the login screen.
+1. **الخطوة 1**: لتسجيل الخروج، انقر على زر **تسجيل الخروج** في الزاوية العلوية اليمنى من الشاشة.
+2. **التفاصيل**: يؤدي تسجيل الخروج إلى مسح بيانات اعتماد الـ IPTV الخاصة بك ويعيدك إلى شاشة تسجيل الدخول.
 
-## Notes
+## ملاحظات
 
-- **Security**: Your IPTV credentials are used solely to fetch your channel list and are not stored by the app.
-- **Compatibility**: The app is responsive and works across different devices and screen sizes.
-- **External APIs**: The app fetches IPTV playlists from your IPTV provider using the credentials you provide.
+- **الأمان**: يتم استخدام بيانات اعتماد الـ IPTV الخاصة بك فقط لجلب قائمة القنوات الخاصة بك ولا يتم تخزينها بواسطة التطبيق.
+- **التوافقية**: التطبيق متجاوب ويعمل عبر مختلف الأجهزة وأحجام الشاشات.
+- **واجهات برمجة التطبيقات الخارجية**: يجلب التطبيق قوائم تشغيل الـ IPTV من مزود خدمة الـ IPTV الخاص بك باستخدام البيانات التي تقدمها.
